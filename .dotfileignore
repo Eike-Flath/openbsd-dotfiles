@@ -1,3 +1,4 @@
 .dotfileignore
 .git/
 README.md
+deploy-dotfiles.sh

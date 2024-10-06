@@ -10,7 +10,7 @@ die() {
 [ $(id -u) -eq 0 ] || die "run this as root"
 [ -n "${1-}" ] || die "usage: $0 <user name>"
 
-DOTFILES_ROOT="$(realpath "$(dirname "$0")/../..")"
+DOTFILES_ROOT="$(realpath "$(dirname "$0")")"
 echo "dotfiles root: $DOTFILES_ROOT"
 
 echo "checking for internet access..."
@@ -28,6 +28,6 @@ set +x
 USER_HOME="$(userinfo "$USER_NAME" | grep ^dir | cut -f 2)"
 for f in $(<"$DOTFILES_ROOT/.dotfileignore")
 do
-	rm -rfv "$USER_HOME/$f"
+	rm -rf "$USER_HOME/$f"
 done
 
