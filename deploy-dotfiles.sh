@@ -24,7 +24,7 @@ groupinfo -e wheel || die "group wheel does not exist"
 [ -x /bin/ksh ] || die "/bin/ksh doesn't exist"
 
 set -x
-useradd -m -s /bin/ksh -k "$DOTFILES_ROOT" -g wheel -G users "$USER_NAME"
+useradd -m -s /bin/ksh -k "$DOTFILES_ROOT" -g users -G wheel "$USER_NAME"
 passwd "$USER_NAME"
 set +x
 USER_HOME="$(userinfo "$USER_NAME" | grep ^dir | cut -f 2)"
