@@ -20,7 +20,7 @@ ping -c 1 openbsd.org >/dev/null || die "failed to ping openbsd.org"
 USER_NAME="$1"
 userinfo -e "$USER_NAME" && die "the user $USER_NAME already exists" 
 groupinfo -e users || die "group users does not exist"
-groupinfo -e wheel || die "group users does not exist"
+groupinfo -e wheel || die "group wheel does not exist"
 [ -x /bin/ksh ] || die "/bin/ksh doesn't exist"
 
 set -x
