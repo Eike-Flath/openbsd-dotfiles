@@ -13,7 +13,7 @@ case $- in
 *l*) # Login shell
 	if [ "$(tty)" = "/dev/ttyC0" ] && [ -z "$DISPLAY" ]
 	then
-		XINITRC="$HOME/.config/xinitrc"
+		export XINITRC="$HOME/.config/xinitrc"
 		exec startx
 	fi
 	;;
