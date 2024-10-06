@@ -1,5 +1,8 @@
 #!/bin/ksh
 
-clear
+# TODO: install user local software
+
 echo "Successfully set up your dotfiles"
+sleep 2
+clear
 
