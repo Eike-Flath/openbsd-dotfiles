@@ -9,5 +9,7 @@ export USER
 readonly HOME
 export HOME
 
+export PATH="$PATH:$HOME/.local/bin"
+
 [ "$SHELL" = "/bin/ksh" ] && export ENV=$HOME/.config/kshrc
 
