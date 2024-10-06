@@ -7,6 +7,7 @@ die() {
 	exit 1
 }
 
+[ "$(uname)" = "OpenBSD" ] || die "this script is written for OpenBSD"
 [ $(id -u) -eq 0 ] || die "run this as root"
 [ -n "${1-}" ] || die "usage: $0 <user name>"
 
