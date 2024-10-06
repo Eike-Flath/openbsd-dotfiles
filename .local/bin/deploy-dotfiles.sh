@@ -22,6 +22,6 @@ groupinfo -e users || die "group users does not exist"
 groupinfo -e wheel || die "group users does not exist"
 
 set -x
-useradd -m -s "$SHELL" -k "$DOTFILES_ROOT" -g users -G wheel
+useradd -m -s "$SHELL" -k "$DOTFILES_ROOT" -g users -G wheel "$USER_NAME"
 passwd "$USER_NAME"
 
