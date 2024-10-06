@@ -1,3 +1,5 @@
+#!/bin/sh
+
 [ -f /etc/profile ] && . /etc/profile
 
 [ -n "$USER" ] || USER="$(id -un)"

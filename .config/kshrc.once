@@ -1,3 +1,5 @@
+#!/bin/ksh
+
 clear
 echo "Successfully set up your dotfiles"
 
