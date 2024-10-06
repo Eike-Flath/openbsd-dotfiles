@@ -4,8 +4,7 @@ clear
 
 if [ -f "$HOME/.config/kshrc.once" ]
 then
-	. "$HOME/.config/kshrc.once"
-	rm "$HOME/.config/kshrc.once"
+	ksh "$HOME/.config/kshrc.once" && rm "$HOME/.config/kshrc.once"
 fi
 
 PS1='\W \$ ' 

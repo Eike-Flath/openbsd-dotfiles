@@ -1,6 +1,16 @@
 #!/bin/ksh
 
-# TODO: install user local software
+set -eu
+
+# Install dwm
+echo "Installing dwm..."
+cd
+mkdir -p .local/src
+cd .local/src
+git clone https://github.org/Eike-Flath/dwm.git
+cd dwm
+make install
+cd
 
 echo "Successfully set up your dotfiles"
 sleep 2
