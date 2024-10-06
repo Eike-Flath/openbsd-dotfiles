@@ -6,11 +6,11 @@ then
 	rm "$HOME/.config/kshrc.once"
 fi
 
-PS1='\W \$ '
+PS1='\W \$ ' 
 
 case $- in
 *l*) # Login shell
-	if [ "$(tty)" -eq "/dev/ttyC0" ] && [ -z "$DISPLAY" ]
+	if [ "$(tty)" = "/dev/ttyC0" ] && [ -z "$DISPLAY" ]
 	then
 		XINITRC="$HOME/.config/xinitrc"
 		exec startx
