@@ -1,5 +1,9 @@
 #!/bin/sh
 
+WALLPAPER="$HOME/wallpapers/blowfish.jpg"
+[ -f "$WALLPAPER" ] && xwallpaper "$WALLPAPER"
+unset WALLPAPER
+
 xterm &
-exec fvwm
+exec dwm
 
