@@ -7,5 +7,5 @@ export USER
 readonly HOME
 export HOME
 
-ENV=$HOME/.config/kshrc
+export ENV=$HOME/.config/kshrc
 
