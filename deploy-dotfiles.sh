@@ -18,7 +18,7 @@ ping -c 1 openbsd.org >/dev/null || die "failed to ping openbsd.org"
 clear
 
 echo "installing some software..."
-pkg_add git htop xwallpaper
+pkg_add feh git htop 
 clear
 
 echo "creating user..."
