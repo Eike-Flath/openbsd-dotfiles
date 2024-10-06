@@ -8,3 +8,13 @@ fi
 
 PS1='\W \$ '
 
+case $- in
+*l*) # Login shell
+	if [ "$(tty)" -eq "/dev/ttyC0" ] && [ -z "$DISPLAY" ]
+	then
+		XINITRC="$HOME/.config/xinitrc"
+		exec startx
+	fi
+	;;
+esac
+
