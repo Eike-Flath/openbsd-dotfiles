@@ -7,7 +7,7 @@ echo "Installing dwm..."
 cd
 mkdir -p .local/src
 cd .local/src
-git clone https://github.org/Eike-Flath/dwm.git
+git clone http://github.org/Eike-Flath/dwm.git
 cd dwm
 make install
 cd
