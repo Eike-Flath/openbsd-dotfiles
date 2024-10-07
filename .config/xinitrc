@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WALLPAPER="$HOME/wallpapers/blowfish.jpg"
+WALLPAPER="$HOME/wallpapers/blowfish.png"
 [ -f "$WALLPAPER" ] && xwallpaper --no-randr --zoom "$WALLPAPER"
 unset WALLPAPER
 
