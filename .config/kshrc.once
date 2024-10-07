@@ -12,6 +12,13 @@ cd dwm
 make install
 cd
 
+echo "Installing st..."
+cd .local/src
+git clone http://github.org/Eike-Flath/st.git
+cd st
+make install
+cd
+
 echo "Successfully set up your dotfiles"
 sleep 2
 clear
