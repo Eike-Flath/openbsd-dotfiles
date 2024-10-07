@@ -17,8 +17,11 @@ echo "checking for internet access..."
 ping -c 1 openbsd.org >/dev/null || die "failed to ping openbsd.org"
 clear
 
-echo "installing some software..."
-pkg_add ffmpeg git htop mpv nsxiv xwallpaper 
+for p in $(<"$DOTFILES_ROOT/pkglist")
+do
+	echo "installing pkg '$p'..."
+	pkg_add $p
+done
 clear
 
 echo "creating user..."
