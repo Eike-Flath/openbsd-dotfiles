@@ -24,6 +24,18 @@ do
 done
 clear
 
+echo "installing FiraCode font..."
+cd
+mkdir firacode
+cd firacode
+curl --fail --location --show-error https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip -o firacode.zip
+unzip firacode.zip
+mkdir -p /usr/local/share/fonts/TTF
+mv ttf/*.ttf /usr/local/share/fonts/TTF/
+cd
+rm -rf firacode
+clear
+
 echo "creating user..."
 USER_NAME="$1"
 userinfo -e "$USER_NAME" && die "the user $USER_NAME already exists" 
