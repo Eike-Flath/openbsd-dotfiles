@@ -2,10 +2,12 @@
 
 clear
 
-if [ -f "$HOME/.config/kshrc.once" ]
+ONCE_FILE="$XDG_CONFIG_HOME/once.kshrc"
+if [ -f "$ONCE_FILE" ]
 then
-	ksh "$HOME/.config/kshrc.once" && rm "$HOME/.config/kshrc.once"
+	ksh "$ONCE_FILE" && rm "$ONCE_FILE"
 fi
+unset ONCE_FILE
 
 PS1='\W \$ ' 
 
@@ -13,7 +15,6 @@ case $- in
 *l*) # Login shell
 	if [ "$(tty)" = "/dev/ttyC0" ] && [ -z "$DISPLAY" ]
 	then
-		export XINITRC="$HOME/.config/xinitrc"
 		exec startx
 	fi
 	;;

@@ -12,5 +12,11 @@ export HOME
 export PATH="$PATH:$HOME/.local/bin"
 export MANPATH=":$HOME/.local/man"
 
-[ "$SHELL" = "/bin/ksh" ] && export ENV=$HOME/.config/kshrc
+# Dont't clutter my home dir!!! 
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export TERMINFO="$XDG_DATA_HOME/terminfo"
+[ "$SHELL" = "/bin/ksh" ] && export ENV=$XDG_CONFIG_HOME/ksh.kshrc
+export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
+export XINITRC="$XDG_CONFIG_HOME/X11/xinit/xinitrc"
 
