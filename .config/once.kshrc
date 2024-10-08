@@ -2,6 +2,8 @@
 
 set -eu
 
+mkdir -p "$TERMINFO"
+
 # Install dwm
 echo "Installing dwm..."
 cd
